@@ -29,11 +29,24 @@
 import './index.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { HelloWorld } from './components/HelloWorld';
+import { Home } from './components/Home';
+import { HashRouter, Routes, Route } from 'react-router';
+import { Settings } from './components/Settings';
+
+function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
+    </HashRouter>
+  );
+}
 
 const root = createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
-    <HelloWorld />
+    <App />
   </React.StrictMode>
 );
