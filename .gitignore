@@ -90,3 +90,6 @@ typings/
 
 # Electron-Forge
 out/
+
+# TypeScript/Vite scratch build output
+dist/
